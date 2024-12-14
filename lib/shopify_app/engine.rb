@@ -20,10 +20,8 @@ module ShopifyApp
       app.config.middleware.insert_after(::Rack::Runtime, ShopifyApp::JWTMiddleware)
     end
 
-    initializer "shopify_app.assets.precompile" do |app|
-      app.config.assets.precompile += [
-        "shopify_app/redirect.js",
-      ]
+    initializer "shopify_app.assets" do |app|
+      app.config.assets.paths << root.join('app', 'assets', 'javascripts', 'shopify_app').to_s
     end
 
     initializer "shopify_app.redact_job_params" do

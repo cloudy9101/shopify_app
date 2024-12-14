@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency("rails", "> 5.2.1")
   s.add_runtime_dependency("redirect_safely", "~> 1.0")
   s.add_runtime_dependency("shopify_api", ">= 14.7.0", "< 15.0")
-  s.add_runtime_dependency("sprockets-rails", ">= 2.0.0")
   # Deprecated: move to development dependencies when releasing v23
   s.add_runtime_dependency("jwt", ">= 2.2.3")
 
